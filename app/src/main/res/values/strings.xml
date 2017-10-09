@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Petri</string>
+    <string name="title_activity_main">Petri</string>
 </resources>
