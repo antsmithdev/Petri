@@ -4,9 +4,14 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
+    dataBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.droidsmith.petri"
         minSdkVersion 19
@@ -21,9 +26,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
+
+
 
 }
 
@@ -42,6 +46,6 @@ dependencies {
     implementation 'com.android.support:design:26.1.0'
 
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-
+    kapt 'com.android.databinding:compiler:2.3.1'
 
 }
