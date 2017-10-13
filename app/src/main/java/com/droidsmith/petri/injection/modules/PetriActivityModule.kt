@@ -2,7 +2,7 @@ package com.droidsmith.petri.injection.modules
 
 import com.droidsmith.petri.injection.components.FeedFragmentComponent
 import com.droidsmith.petri.injection.components.PrivateChatFragmentComponent
-import com.droidsmith.petri.ui.map.PetriViewModel
+import com.droidsmith.petri.ui.petri.PetriViewModel
 import dagger.Module
 import dagger.Provides
 

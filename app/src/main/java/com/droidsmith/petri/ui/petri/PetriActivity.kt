@@ -1,20 +1,18 @@
-package com.droidsmith.petri.ui.map
+package com.droidsmith.petri.ui.petri
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
-import android.content.res.Resources
 import android.databinding.DataBindingUtil
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
-import android.util.Log
+import android.support.v4.app.Fragment
 import android.view.View
 import android.view.ViewAnimationUtils
 import com.droidsmith.petri.R
 import com.droidsmith.petri.databinding.ActivityMainBinding
-import com.droidsmith.petri.ui.feed.FeedViewModel
-import com.droidsmith.petri.ui.map.adapters.TabPagerAdapter
+import com.droidsmith.petri.ui.petri.adapters.TabPagerAdapter
 import com.droidsmith.petri.util.ddiv
 import com.droidsmith.petri.util.setStyle
 
@@ -23,18 +21,30 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
+import dagger.android.AndroidInjection
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
 
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 
-class PetriActivity : AppCompatActivity(), OnMapReadyCallback {
+class PetriActivity : AppCompatActivity(), HasSupportFragmentInjector, OnMapReadyCallback {
+
+
+    @Inject
+    lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
     private lateinit var mMap: GoogleMap
-    var isChatVisible = false
+    private var isChatVisible = false
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
@@ -123,6 +133,9 @@ class PetriActivity : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
+
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> =
+            fragmentDispatchingAndroidInjector
 
 
 

@@ -2,7 +2,7 @@ package com.droidsmith.petri.injection.components
 
 import com.droidsmith.petri.injection.modules.FragmentModule
 import com.droidsmith.petri.injection.modules.PetriActivityModule
-import com.droidsmith.petri.ui.map.PetriActivity
+import com.droidsmith.petri.ui.petri.PetriActivity
 import dagger.Subcomponent
 import dagger.android.AndroidInjector
 

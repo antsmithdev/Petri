@@ -17,7 +17,10 @@ class MapService: Service() {
         return super.onStartCommand(intent, flags, startId)
     }
 
+
+
     override fun onCreate() {
+
         super.onCreate()
     }
 

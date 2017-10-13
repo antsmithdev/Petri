@@ -1,4 +1,4 @@
-package com.droidsmith.petri.ui.map.adapters
+package com.droidsmith.petri.ui.petri.adapters
 
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
