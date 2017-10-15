@@ -25,7 +25,6 @@
             android:layout_height="match_parent"
             android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
-
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/chatFab"
             android:layout_width="wrap_content"
@@ -40,6 +39,11 @@
             app:rippleColor="@color/colorPrimary"
             app:srcCompat="@drawable/fab_up" />
 
+        <Button
+            android:id="@+id/testButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PubNub Test" />
 
         <LinearLayout
             android:id="@+id/chatView"
@@ -69,10 +73,6 @@
 
 
     </android.support.constraint.ConstraintLayout>
-
-
-
-
 
 </layout>
 

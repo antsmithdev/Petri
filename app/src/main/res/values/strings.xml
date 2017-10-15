@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Petri</string>
     <string name="title_activity_main">Petri</string>
+
+
+
+    <!--PubNub Keys TODO: hide these in release-->
+    <string name="pn_publish_key">pub-c-0083412a-b417-4de3-8b7d-763194997f53</string>
+    <string name="pn_sub_key">sub-c-d65cb184-ae45-11e7-af03-56d0cae65fed</string>
+
 </resources>

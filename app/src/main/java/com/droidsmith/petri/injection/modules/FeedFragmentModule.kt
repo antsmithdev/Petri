@@ -6,8 +6,6 @@ import dagger.Provides
 
 @Module
 class FeedFragmentModule {
-
     @Provides
     fun provideFeedViewModel(): FeedViewModel = FeedViewModel()
-
 }

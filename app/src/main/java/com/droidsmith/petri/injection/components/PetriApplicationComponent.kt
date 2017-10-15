@@ -2,19 +2,18 @@ package com.droidsmith.petri.injection.components
 
 import android.app.Application
 import com.droidsmith.petri.PetriApplication
-import com.droidsmith.petri.injection.modules.FragmentModule
-import com.droidsmith.petri.injection.modules.PetriActivityModule
-import com.droidsmith.petri.injection.modules.PetriApplicationModule
+import com.droidsmith.petri.injection.modules.*
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.support.AndroidSupportInjectionModule
 
 
+
 @Component(modules = arrayOf(
         AndroidSupportInjectionModule::class,
         PetriApplicationModule::class,
-        PetriActivityModule::class,
+        ActivityModule::class,
         FragmentModule::class
 ))
 interface PetriApplicationComponent {
@@ -23,7 +22,6 @@ interface PetriApplicationComponent {
     interface Builder {
         @BindsInstance
         fun application(application: Application): Builder
-
         fun build(): PetriApplicationComponent
     }
 

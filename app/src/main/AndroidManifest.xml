@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme">
 
         <service android:name=".data.services.MapService" />
+        <service android:name=".data.services.pubnub.PubNubService" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

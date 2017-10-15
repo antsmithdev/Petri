@@ -7,9 +7,6 @@ import dagger.android.AndroidInjector
 
 @Subcomponent(modules = arrayOf(FeedFragmentModule::class))
 interface FeedFragmentComponent: AndroidInjector<FeedFragment> {
-
     @Subcomponent.Builder
     abstract class Builder: AndroidInjector.Builder<FeedFragment>()
-
-
 }

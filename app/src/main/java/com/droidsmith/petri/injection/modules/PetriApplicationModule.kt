@@ -9,10 +9,7 @@ import javax.inject.Singleton
 
 @Module(subcomponents = arrayOf(PetriActivityComponent::class))
 class PetriApplicationModule {
-
     @Provides
     @Singleton
     fun provideContext(application: Application): Context = application
-
-
 }

@@ -9,9 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import com.droidsmith.petri.R
 import com.droidsmith.petri.databinding.FragmentFeedBinding
+import javax.inject.Inject
 
 
 class FeedFragment : Fragment() {
+
+
+    @Inject
+    lateinit var viewModel: FeedViewModel
+
 
     companion object {
         fun newInstance(): FeedFragment {
@@ -28,8 +34,7 @@ class FeedFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding: FragmentFeedBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_feed, container, false)
-        val view: View = binding.getRoot()
-        return view
+        return binding.root
     }
 
 

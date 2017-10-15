@@ -8,8 +8,6 @@ import dagger.android.AndroidInjector
 
 @Subcomponent(modules = arrayOf(PetriActivityModule::class, FragmentModule::class))
 interface PetriActivityComponent: AndroidInjector<PetriActivity>{
-
     @Subcomponent.Builder
     abstract class Builder: AndroidInjector.Builder<PetriActivity>()
-
 }
